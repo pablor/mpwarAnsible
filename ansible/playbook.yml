@@ -1,6 +1,6 @@
 ---
 - name: My first playbook :)
-  hosts: "webservers"
+  hosts: "infraestructure"
   become: true
   become_user: root
   tasks:
