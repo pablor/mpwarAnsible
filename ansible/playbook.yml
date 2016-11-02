@@ -7,8 +7,12 @@
     server_name: localhostNode
     cache_size: 10GB
   tasks:
+    - name: capture output of whoami command
+      command: whoami
+      register: login
+
     - name: debug
-      debug: var=server_name
+      debug: var=login
 
     - name: Install Apache
       yum: pkg=httpd state=present
