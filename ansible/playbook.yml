@@ -1,6 +1,6 @@
 ---
 - name: My first playbook :)
-  hosts: "infraestructure"
+  hosts: "databases"
   become: true
   become_user: root
   tasks:
@@ -15,3 +15,6 @@
 
     - name: restart Apache
       service: name=httpd state=restarted
+
+    - name: debug
+      debug: var=host_name

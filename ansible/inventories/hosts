@@ -7,3 +7,12 @@
 [infraestructure:children]
 webservers
 databases
+
+[webservers:vars]
+host_name=frontend
+
+[databases:vars]
+host_name=database
+
+[infraestructure:vars]
+time_zone=Europe/Madrid
