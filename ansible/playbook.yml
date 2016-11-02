@@ -7,14 +7,13 @@
     server_name: localhostNode
     cache_size: 10GB
   tasks:
-    - name: capture output of whoami command
-      command: whoami
-      register: login
+    - name: "Show message if distribution is Debian"
+      debug: msg="Is Debian!"
+      when: ansible_os_family == "Debian"
 
-    - name: debug
-      debug: var=login
-
-    - debug: var=ansible_distribution
+    - name: "Show message if distribution is RedHat"
+      debug: msg="Is RedHat!"
+      when: ansible_os_family == "RedHat"
 
     - name: Install Apache
       yum: pkg=httpd state=present
