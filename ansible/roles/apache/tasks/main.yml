@@ -5,7 +5,7 @@
     copy: src=files/configuration.conf dest=/etc/httpd/conf.d/configuration.conf
 
   - name: Create default HTML with SO version
-    template: src=templates/index.html dest=/home/vagrant/index_new.html
+    template: src=templates/index.html dest=~/index_new.html
 
   - name: restart Apache
     service: name=httpd state=restarted

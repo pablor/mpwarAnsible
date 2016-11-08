@@ -1,0 +1,18 @@
+[webservers]
+52.31.99.55 ansible_ssh_private_key_file=/ansible/files/mpwar16.pem ansible_user=root
+
+[databases]
+52.31.99.55  ansible_ssh_private_key_file=/ansible/files/mpwar16.pem ansible_user=root
+
+[infraestructure:children]
+webservers
+databases
+
+[webservers:vars]
+host_name=frontend
+
+[databases:vars]
+host_name=database
+
+[infraestructure:vars]
+time_zone=Europe/Madrid
