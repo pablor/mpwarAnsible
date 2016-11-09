@@ -1,0 +1,8 @@
+---
+- name: My first playbook :)
+  hosts: "webservers"
+  become: true
+  become_user: root
+  roles:
+    - apache
+    - { role: geerlingguy.mysql }
