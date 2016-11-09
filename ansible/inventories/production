@@ -12,7 +12,7 @@ databases
 host_name=frontend
 
 [databases:vars]
-host_name=database
+mysql_innodb_buffer_pool_size="512M"
 
 [infraestructure:vars]
 time_zone=Europe/Madrid
