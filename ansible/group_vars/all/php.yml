@@ -1,0 +1,17 @@
+php_use_managed_ini: false
+php_packages:
+  - php
+  - php-cli
+  - php-common
+  - php-opcache
+  - php-gd
+  - php-mysqlnd
+  - php-mbstring
+  - php-xml
+  - php-tidy
+  - php-soap
+  - php-pear
+  - php-pecl-xdebug
+  - php-bcmath
+  - php-devel
+php_display_errors: "On"

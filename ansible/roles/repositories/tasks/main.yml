@@ -1,0 +1,17 @@
+- name: Enable Epel repo
+  ini_file: dest=/etc/yum.repos.d/epel.repo
+            section=epel
+            option=enabled
+            value=1
+
+- name: Enable Remi repo
+  ini_file: dest=/etc/yum.repos.d/remi.repo
+            section=remi
+            option=enabled
+            value=1
+
+- name: Enable PHP 7 from Remi repo
+  ini_file: dest=/etc/yum.repos.d/remi.repo
+            section=remi-php70
+            option=enabled
+            value=1
