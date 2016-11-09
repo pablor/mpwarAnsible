@@ -37,4 +37,4 @@ done
 
 # Execute Ansible
 echo "-> Execute Ansible"
-ansible-playbook /ansible/playbook.yml -i /ansible/inventories/hosts --connection=local
+ansible-playbook /ansible/playbook_development.yml -i /ansible/inventories/hosts --connection=local
