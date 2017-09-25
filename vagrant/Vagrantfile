@@ -1,5 +1,10 @@
 Vagrant.require_version ">= 1.5"
 
+required_plugins = %w( vagrant-vbguest )
+required_plugins.each do |plugin|
+  system "vagrant plugin install #{plugin}" unless Vagrant.has_plugin? plugin
+end
+
 Vagrant.configure("2") do |config|
 
     config.vm.box     = "nrel/CentOS-6.7-x86_64"
