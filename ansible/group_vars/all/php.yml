@@ -15,4 +15,5 @@ php_packages:
   - php-pecl-xdebug
   - php-bcmath
   - php-devel
+  - php-apc
 php_display_errors: "On"
