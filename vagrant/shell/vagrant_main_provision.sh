@@ -10,6 +10,7 @@ then
 
     # Install Ansible
     sudo yum install ansible -y
+    sudo yum install python-urllib3 pyOpenSSL python2-ndg_httpsclient python-pyasn1 -y
 
     # Add SSH key
     cat /ansible/files/authorized_keys >> /home/vagrant/.ssh/authorized_keys
